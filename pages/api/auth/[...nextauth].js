@@ -2,6 +2,7 @@ import NextAuth from "next-auth"
 import GoogleProvider from 'next-auth/providers/google'
 import { FirebaseAdapter } from "@next-auth/firebase-adapter"
 import db from "../../../firebase"
+// import { redirect } from "next/dist/server/api-utils"x
 
 
 export default NextAuth({
@@ -14,4 +15,5 @@ export default NextAuth({
     // ...add more providers here
   ],
   adapter : FirebaseAdapter(db)
+  
 })
